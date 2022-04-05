@@ -32,6 +32,9 @@ module.exports.routes = {
   * not match any of those, it is matched against static assets.             *
   *                                                                          *
   ***************************************************************************/
-
+   
+  'GET /meal/new': { view: 'pages/meal/new' },
+  'POST /meal': { action: 'meal/create' },
+  'GET /meal': { action: 'meal/find-one' },
 
 };

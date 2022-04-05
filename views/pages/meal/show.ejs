@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="m-4">
+        <h1 class="text-4xl font-sans text-gray-500 font-light ml-2 mt-4">Speisekarten Eintrag anzeigen</h1>
+
+        <div class="">
+            <%= message ? message : "" %>
+        </div>
+
+        <div>
+            <div>
+                <div class="menu-title">
+                    Name
+                </div> 
+                <div>
+                    <%= meal.name %>
+                </div>
+            </div>
+            <div>
+                <div class="menu-title">
+                    Preis
+                </div> 
+                <div>
+                    <%= meal.price %>
+                </div>
+            </div>
+            <div>
+                <div class="menu-title">
+                    Beschreibung
+                </div> 
+                <div>
+                    <%= meal.description %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

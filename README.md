@@ -12,15 +12,28 @@ a [Sails v1](https://sailsjs.com) application
 + [Professional / enterprise options](https://sailsjs.com/enterprise)
 
 
-### Version info
+### Move of Static Website into sails
 
-This app was originally generated on Thu Mar 31 2022 09:09:23 GMT+0200 (Central European Summer Time) using Sails v1.5.0.
+Generated with``sails new tutorial3``.
 
-<!-- Internally, Sails used [`sails-generate@2.0.4`](https://github.com/balderdashy/sails-generate/tree/v2.0.4/lib/core-generators/new). -->
+Moved static files from *tutorial3* to the asset directory.
+- all files in *images* to */asset/img* directory
+- all files in *css* to */asset/styles* directory
+- the *home.html* file to the */asset/* directory. Adapt paths ion the files to the changed subdirectories.
 
 
+Changes in layout.ejs:
+- Change title in */views/layouts/layout.ejs*
+- Add link to bootstrap stylesheet into */views/layouts/layout.ejs*
+- Copy content of *body* tag of *home.html* into */views/pages/homepage.ejs*
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+Nedd to restart sails that changes take effect.
+
+
+### Add Form to Create Meals
+
+- add "meal/new.ejs"
+- update routes.js with new routes for meals
+- move header/footer from homepage.ejs to layout.ejs 
+
 
