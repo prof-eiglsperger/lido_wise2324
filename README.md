@@ -1,4 +1,4 @@
-# tutorial-3
+# tutorial-4
 
 a [Sails v1](https://sailsjs.com) application
 
@@ -12,28 +12,10 @@ a [Sails v1](https://sailsjs.com) application
 + [Professional / enterprise options](https://sailsjs.com/enterprise)
 
 
-### Move of Static Website into sails
+### Create and View Meals
 
-Generated with``sails new tutorial3``.
+Modifications to *tutorial3*
 
-Moved static files from *tutorial3* to the asset directory.
-- all files in *images* to */asset/img* directory
-- all files in *css* to */asset/styles* directory
-- the *home.html* file to the */asset/* directory. Adapt paths ion the files to the changed subdirectories.
-
-
-Changes in layout.ejs:
-- Change title in */views/layouts/layout.ejs*
-- Add link to bootstrap stylesheet into */views/layouts/layout.ejs*
-- Copy content of *body* tag of *home.html* into */views/pages/homepage.ejs*
-
-Nedd to restart sails that changes take effect.
-
-
-### Add Form to Create Meals
-
-- add "meal/new.ejs"
-- update routes.js with new routes for meals
-- move header/footer from homepage.ejs to layout.ejs 
-
-
+* Added views to display and enter meals
+* Added a Controller *MenuController* to handle requests
+* Added a mode class for menus 
