@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Speisen</h1>
+
+
+    <div class="item-content">
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Preis</th>
+            </thead>
+            <tbody>
+                <% meals.forEach(function(meal){ %>
+                    <tr>
+                        <td>
+                            <%= meal.name %>
+                        </td>
+                        <td>
+                            <%= meal.price %>
+                        </td>
+                        <td> <a href="/meal/show?id=<%= meal.id %>">anzeigen</a></td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <a href="/meal/new">Hinzufügen</a>
+    </div>
+</div>
+</div>

@@ -1,33 +1,29 @@
 <div class="container">
     <div class="m-4">
-        <h1 class="text-4xl font-sans text-gray-500 font-light ml-2 mt-4">Speisekarten Eintrag anzeigen</h1>
-
-        <div class="">
-            <%= message ? message : "" %>
-        </div>
+        <h1 class="text-4xl font-sans text-gray-500 font-light">Speisekarten Eintrag anzeigen</h1>
 
         <div>
-            <div>
-                <div class="menu-title">
+            <div class="row">
+                <div class="col-2">
                     Name
                 </div> 
-                <div>
+                <div class="col-10">
                     <%= meal.name %>
                 </div>
             </div>
-            <div>
-                <div class="menu-title">
+            <div class="row">
+                <div class="col-2">
                     Preis
                 </div> 
-                <div>
+                <div class="col-10">
                     <%= meal.price %>
                 </div>
             </div>
-            <div>
-                <div class="menu-title">
+            <div class="row">
+                <div class="col-2">
                     Beschreibung
                 </div> 
-                <div>
+                <div class="col-10">
                     <%= meal.description %>
                 </div>
             </div>
