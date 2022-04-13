@@ -16,7 +16,7 @@ module.exports = {
       res.view('pages/meal/status', { "success": false })
     } else {
       sails.log.debug("Create new meal....")
-      let meal = await Meal.create(req.allParams()).fetch();
+      let meal = await Meal.create(req.allParams());
       res.view('pages/meal/status', { "success": true })
     }
   },
