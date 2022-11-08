@@ -37,6 +37,6 @@ module.exports.routes = {
   
   'GET /meal/new': { view: 'pages/meal/new' },
   'POST /meal': { controller: 'MealController', action:'create' },
-  'GET /meal': { controller: 'MealController', action: 'meal/find' },
-  'GET /meal/show': { controller: 'MealController', action: 'meal/findOne' },
+  'GET /meal': 'MealController.find',
+  'GET /meal/show': 'meal.findOne'
 };

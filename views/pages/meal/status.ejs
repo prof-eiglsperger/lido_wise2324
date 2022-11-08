@@ -1,5 +1,6 @@
-<% if (success) { %> 
-Speise wurde erfolgreich gespeichert.
-<% } else { %>
-Speise konnte nicht gespeichert werden.
-<% } %>
+<div class="container">
+    <div class="mt-4 alert alert-success">
+        Speise wurde <%= mealname %> erfolgreich gespeichert.
+    </div>
+    <a class="green-button" href="/admin">Zurück zur Administrationsoberfläche</a>
+</div>
