@@ -4,8 +4,8 @@ a [Sails v1](https://sailsjs.com) application
 
 ### Delete, update and search meals
 
-* Updated (/api/contollers/MealController)[]
-* Added and updated views in (/view/pages/meal)[/view/pages/meal]
+* Updated [](/api/contollers/MealController)
+* Added and updated views in [/view/pages/meal](/view/pages/meal)
 * Added Meal model [/api/model/Meal.ejs]
 
 ### Manage categories
