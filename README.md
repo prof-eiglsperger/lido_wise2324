@@ -10,7 +10,7 @@ a [Sails v1](https://sailsjs.com) application
 
 ### Manage categories
 
-* Added [Category model](/api/models/Category.ejs) 
+* Added [Category model](/api/models/Category.js) 
 * Added [CategoryController](/api/controllers/CategoryController.js)
 * Updated [Menu.ejs](/api/models/Menu.js)
 * Added views [/views/pages/category/index.ejs](/views/pages/category/index.ejs) and [/views/pages/category/new.ejs](/views/pages/category/new.ejs)  
