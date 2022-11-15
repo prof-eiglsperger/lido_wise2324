@@ -21,6 +21,7 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  'GET /speisekarte': { controller: 'MenuController', action: 'menu'},
 
   /***************************************************************************
   *                                                                          *
@@ -35,8 +36,17 @@ module.exports.routes = {
   
   'GET /admin': { view: 'pages/admin' },
   
-  'GET /meal/new': { view: 'pages/meal/new' },
+  'GET /meal/new': { controller: 'MealController', action:'new' },
   'POST /meal': { controller: 'MealController', action:'create' },
   'GET /meal': 'MealController.find',
-  'GET /meal/show': 'meal.findOne'
+  'GET /meal/show': 'meal.findOne',
+
+  'GET /meal/:id/edit': { controller: 'MealController', action: 'editOne' },
+  'POST /meal/:id/update': { controller: 'MealController', action: 'updateOne' },
+  'GET /meal/:id/destroy': { controller: 'MealController', action: 'destroyOne' },
+ 
+  'GET /category/new': { view: 'pages/category/new' },
+  'POST /category': { controller: 'CategoryController', action:'create' },
+  'GET /category/:id/destroy': { controller: 'CategoryController', action: 'destroyOne' },
+  'GET /category': { controller: 'CategoryController', action: 'find' },
 };

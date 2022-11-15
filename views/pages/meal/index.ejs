@@ -1,6 +1,11 @@
 <div class="container">
     <h1>Speisen</h1>
 
+    <form action="/meal">
+        <label>Suche</label>
+        <input type="text" value="" length="20" name="q">
+        <button class="green-button" type="submit">Suche</button>
+    </form>
 
     <div class="item-content">
         <table class="table">
@@ -17,7 +22,7 @@
                         <td>
                             <%= meal.price %>
                         </td>
-                        <td> <a class="green-button" href="/meal/show?id=<%= meal.id %>">anzeigen</a></td>
+                        <td> <a class="green-button" href="/meal/<%= meal.id %>">anzeigen</a></td>
                     </tr>
                     <% }); %>
             </tbody>

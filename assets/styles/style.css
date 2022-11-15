@@ -24,6 +24,10 @@ nav a {
     text-decoration: underline #85A60F;
 }
 
+nav a:hover {
+    color: #85A60F;
+}
+
 #logo {
     width:64px;
     height: 64px;

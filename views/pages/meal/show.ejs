@@ -28,6 +28,16 @@
                     <%= meal.description %>
                 </div>
             </div>
+            <% if(meal.category) { %>
+                <div class="row">
+                    <div class="col-2">
+                        Kategorie
+                    </div> 
+                    <div class="col-10">
+                        <%= meal.category.name %>
+                    </div>
+                </div>
+                <% } %>
         </div>
     </div>
 </div>
