@@ -22,7 +22,12 @@
                         <td>
                             <%= meal.price %>
                         </td>
+                        <td>
+                            <%= meal.category.name %>
+                        </td>
                         <td> <a class="green-button" href="/meal/<%= meal.id %>">anzeigen</a></td>
+                        <td> <a class="green-button" href="/meal/<%= meal.id %>/edit">ändern</a></td>
+                        <td> <a class="green-button" href="/meal/<%= meal.id %>/destroy">löschen</a></td>
                     </tr>
                     <% }); %>
             </tbody>

@@ -22,6 +22,7 @@ module.exports = {
 
   find: async function (req, res) {
     sails.log.debug("List all meals....")
+    let meals;
     if (req.query.q && req.query.q.length > 0) {
       meals = await Meal.find({
         name: {
@@ -29,7 +30,7 @@ module.exports = {
         }
       })
     } else {
-      let meals = await Meal.find();
+      meals = await Meal.find().populate("category");
     }
     res.view ('pages/meal/index', { meals: meals } );
   },
