@@ -57,6 +57,18 @@ module.exports = {
     sails.log.debug("Update single meal....")
     let meal = await Meal.updateOne({ id: req.params.id }).set(req.body);
     res.redirect('/meal');
-  }
+  },
+
+  report: async function (req, res) {
+    let sql = "select m.id, m.name, m.createdAt, m.updatedAt from meal as m order by m.updatedAt desc;";
+    var rawResult = await sails.sendNativeQuery(sql);
+    
+    console.dir(rawResult);
+    let entries  = [];
+    rawResult.rows.forEach(element => {
+      entries.push(element);
+    });
+    res.view('pages/meal/report', { entries });
+ }
 };
 

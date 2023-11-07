@@ -39,12 +39,15 @@ module.exports.routes = {
   'GET /meal/new': { controller: 'MealController', action:'new' },
   'POST /meal': { controller: 'MealController', action:'create' },
   'GET /meal': 'MealController.find',
-  'GET /meal/show': 'meal.findOne',
+  'GET /meal/:id': 'meal.findOne',
+
 
   'GET /meal/:id/edit': { controller: 'MealController', action: 'editOne' },
   'POST /meal/:id/update': { controller: 'MealController', action: 'updateOne' },
   'GET /meal/:id/destroy': { controller: 'MealController', action: 'destroyOne' },
  
+  'GET /meal/report': 'meal.report',
+
   'GET /category/new': { view: 'pages/category/new' },
   'POST /category': { controller: 'CategoryController', action:'create' },
   'GET /category/:id/destroy': { controller: 'CategoryController', action: 'destroyOne' },

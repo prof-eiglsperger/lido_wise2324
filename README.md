@@ -17,11 +17,16 @@ a [Sails v1](https://sailsjs.com) application
 
 ### Show menu
 
-* Add [MenuController](/api/controllers/MenuController.js)
-* Add [view](/views/pages/menu.ejs) to show menu 
+* Added [MenuController](/api/controllers/MenuController.js)
+* Added [view](/views/pages/menu.ejs) to show menu 
+
+### Raw SQL
+
+* Updated [MealController](/api/controllers/MealController.js) with method report() which contains raw SQL query and updated routes config.
+* Added [view](/views/pages/meal/report.ejs) to show result of query 
 
 ### General
 
 * Updated [routes](/config/routes.js)
-* Updated links ont the [homepage](/view/pages/homepage.ejs) and in the [admin dashboard](/view/pages/admin.ejs)
-* Configures live database in [database config](/config/datastore.js)
+* Updated links ont the [homepage](/views/pages/homepage.ejs) and in the [admin dashboard](/views/pages/admin.ejs)
+* Configures live database in [database config](/config/datastores.js)
