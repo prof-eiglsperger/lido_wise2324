@@ -75,4 +75,8 @@ module.exports.routes = {
   'POST /category': { controller: 'CategoryController', action:'create' },
   'GET /category/:id/destroy': { controller: 'CategoryController', action: 'destroyOne' },
   'GET /category': { controller: 'CategoryController', action: 'find' },
+
+  'GET /shoppingbasket': 'ShoppingBasketController.show',
+  'GET /shoppingbasket/put/:mealid': 'ShoppingBasketController.put',
+  'GET /shoppingbasket/remove/:mealid': 'ShoppingBasketController.remove',
 };

@@ -57,6 +57,9 @@
         </div>
         <% } %>
       <!-- Only in desktop nav -->
+      <% if(req.session.basket && req.session.basket.length> 0){ %>
+        <a class="nav-item nav-link" href="/shoppingbasket">Warenkorb</a></li>
+      <% } %>
       <div class="nav-item dropdown d-none d-sm-block">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Account
