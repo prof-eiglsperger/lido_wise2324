@@ -28,10 +28,8 @@ module.exports.routes = {
   'GET /logout':                         { action: 'account/logout' },
   'POST  /login':                        { action: 'entrance/login' },
   'POST  /signup':                       { action: 'entrance/signup' },
-  'POST  /signup':                       { action: 'entrance/signup' },
   'POST  /updateProfile':                { action: 'account/update-profile' },
   'POST  /updatePassword':               { action: 'account/update-password' },
-  'POST  /signup':                       { action: 'entrance/signup' },
 
 
 
