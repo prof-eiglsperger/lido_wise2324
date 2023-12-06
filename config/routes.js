@@ -77,4 +77,17 @@ module.exports.routes = {
   'GET /shoppingbasket': 'ShoppingBasketController.show',
   'GET /shoppingbasket/put/:mealid': 'ShoppingBasketController.put',
   'GET /shoppingbasket/remove/:mealid': 'ShoppingBasketController.remove',
+
+  /***************************************************************************
+  *                                                                          *
+  *       Shopping Basked API                                                *
+  *                                                                          *
+  ***************************************************************************/
+
+    'GET /shopping': { action: 'view-menu-shopping' },
+  
+    'GET /api/category': { action: 'api/category/index'},
+  
+    'GET /api/basket': {  action:'api/basket/get' },
+    'POST /api/basket': {  action:'api/basket/add' },
 };

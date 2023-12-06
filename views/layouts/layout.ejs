@@ -34,6 +34,7 @@
 
       <!--STYLES-->
       <link rel="stylesheet" href="/dependencies/bootstrap-green.min.css">
+      <link rel="stylesheet" href="/dependencies/vuetify.min.css">
       <link rel="stylesheet" href="/styles/importer.css">
       <link rel="stylesheet" href="/styles/style.css">
       <!--STYLES END-->
@@ -58,6 +59,7 @@
         <% } %>
       <!-- Only in desktop nav -->
       <% if(req.session.basket && req.session.basket.length> 0){ %>
+        <a class="nav-item nav-link" href="http://localhost:1337/shopping#/basket">Varenkorb</a>
         <a class="nav-item nav-link" href="/shoppingbasket">Warenkorb</a></li>
       <% } %>
       <div class="nav-item dropdown d-none d-sm-block">
@@ -172,7 +174,10 @@
 
     <!--SCRIPTS-->
     <script src="/dependencies/sails.io.js"></script>
+    <script src="/dependencies/vue.global.js"></script>
     <script src="/dependencies/bootstrap.bundle.min.js"></script>
+    <script src="/dependencies/vue-router.global.js"></script>
+    <script src="/dependencies/vuetify.min.js"></script>
     <!--SCRIPTS END-->
 </body>
 
