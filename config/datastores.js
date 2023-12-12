@@ -54,7 +54,6 @@ module.exports.datastores = {
     host: '193.196.53.194',
     port: 33061,
     user: 'lido_test_user',
-    password: 'i116108',
     database: 'lido_test'
   },
 

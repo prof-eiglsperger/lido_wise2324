@@ -38,72 +38,14 @@
       <link rel="stylesheet" href="/styles/importer.css">
       <link rel="stylesheet" href="/styles/style.css">
       <!--STYLES END-->
+      <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
-  <header class="navbar navbar-expand-sm  flex-column flex-md-row justify-content-between" purpose="page-header">
-    <a style="cursor: pointer;" class="navbar-brand mr-0" href="/"><img style="height: 40px;" class="logo" alt="NEW_APP_NAME logo" src="/images/logo.png"/></a>
-    <div class="navbar-nav flex-row">
-      <!-- LOGGED-IN NAVIGATION -->
-      <% if(req.me) { %>
-      <!-- Added Block für Super user Navigation-->
-      <% if(req.me.isSuperAdmin) { %>
-        <div class="nav-item dropdown d-none d-sm-block">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Speisekarte</a>
-          <div style="left: auto; right: 0;" class="dropdown-menu" aria-labelledby="header-account-menu-link">
-            <a class="dropdown-item" href="/meal">Speisen</a>
-            <a class="dropdown-item" href="/category">Kategorien</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown d-none d-sm-block">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Account
-          </a>
-          <!--a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a -->
-          <div style="left: auto; right: 0;" class="dropdown-menu" aria-labelledby="header-account-menu-link">
-            <a class="dropdown-item" href="/account">Settings</a>
-            <a class="dropdown-item" href="/logout">Sign out</a>
-          </div>
-        </div>
-        <% } else { %>
-        <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/shopping">Einkaufen</a>
-        <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/account">Account</a>
-        <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/logout">Logout</a>
-        <% } %>
-      <!-- Only in mobile nav -->
-      <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">Account Settings</a>
-      <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sign out</a>
-      <% } else { %>
-      <!-- LOGGED-OUT NAVIGATION -->
-      <!-- Only in desktop nav -->
-        <a class="btn btn-outline-primary nav-link ml-2 ml-md-0 mr-2" href="/login">Log in</a>
-        <a class="btn  btn-outline-primary" href="/signup">Sign up</a>
-      <!-- Only in mobile nav -->
-      <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/shopping">Einkaufen</a>
-      <a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Sign up</a>
-      <% } %>
-    </div>
-  </header>
+  
   <%- body %>
-    <footer class="footer-container">
-      <div class="footer-item">
-        Strandbad Kattenhorn<BR>
-        Strandbadstr. 8<BR>
-        78337 Kattenhorn<BR>
-        <p class="kontakt">
-          Telefon 0049 7735 67770<BR>
-          strandbad@kattenhorn.de<BR>
-        </p>
-      </div>
-      <div class="footer-item">
-        <ul>
-          <li>Preisliste</li>
-          <li>Impressum</li>
-          <li>Datenschutz</li>
-        </ul>
-      </div>
-    </footer>
 
 
     <!--

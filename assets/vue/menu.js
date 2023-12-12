@@ -12,10 +12,10 @@ export default {
       .then((data) => (this.categories = data));
   },
   methods: {
-    order: function (event) {
+    order: function (id) {
       let url = new URL(origin + "/api/basket");
       let data = new FormData();
-      data.append("id", event.target.id);
+      data.append("id", id);
       fetch(url, {
         method: "POST",
         body: data,
@@ -26,21 +26,13 @@ export default {
   },
   template: `
     <div class="container">
-        <span class="h1">Speisekarte</span>
+        <h2 class="mt-4">Speisekarte</h2>
         <div class="my-5" v-for="category in this.categories">
         <span class="h3">{{ category.name }}</span>
         <hr>
             <div class="mt-2" v-for="meal in category.meals">
-                <div class="h4">{{ meal.name }}</div>
-                <div class="d-flex justify-content-between">
-                    <div class="h6">{{ meal.description }} </div>
-                    <div>
-                        <span class="h6"> {{ meal.price }} &euro;</span>
-                        <span :id="meal.id" class="ml-2 btn btn-outline-primary" @click="order">Bestellen</span>
-                    </div>
-                </div>
+              <menuentry :meal='meal' @order="order"></menuentry>
             </div>
         </div>
-        <router-link class="btn btn-primary" to="/basket">To Shopping Basked</router-link>
-    </div>`,
+´    </div>`,
 };

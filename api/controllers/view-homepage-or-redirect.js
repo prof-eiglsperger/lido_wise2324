@@ -29,6 +29,8 @@ module.exports = {
     if (this.req.me) {
       if (this.req.me.isSuperAdmin) {
         throw {redirect:'/admin'};
+      } else {
+        throw {redirect:'/shopping'};
       }
     }
 

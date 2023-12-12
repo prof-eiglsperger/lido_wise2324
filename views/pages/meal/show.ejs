@@ -38,6 +38,16 @@
                     </div>
                 </div>
                 <% } %>
+                <% if(meal.image) { %>
+                <div class="row">
+                    <div class="col-2">
+                        Bild
+                    </div> 
+                    <div class="col-10">
+                        <img src="https://wetebucket.s3.us-west-2.amazonaws.com/<%= meal.image %>">
+                    </div>
+                </div>
+<% } %>
         </div>
     </div>
 </div>

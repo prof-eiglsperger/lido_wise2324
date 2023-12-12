@@ -8,10 +8,23 @@
 const Sails = require("sails/lib/app/Sails");
 
 module.exports = {
+
+  new: async function (req, res) {
+    sails.log.debug("Create new category....")
+    res.view('pages/category/new', { "message": "", "name": "", "ordernumber": "" })
+  },
+
+
   create: async function (req, res) {
-    sails.log.debug("Create new meal....")
-    let category = await Category.create(req.allParams());
-    res.redirect('/category');
+    sails.log.debug("Create new category....")
+    Category.create(req.allParams()).then(() => {
+      res.redirect('/category');
+    }).catch(
+      (err) => {
+        sails.log.debug("Error: " + err.message)
+        res.view('pages/category/new', { "message": err.message, "name": req.body.name, "ordernumber": req.body.ordernumber })
+      }
+    );
   },
 
   find: async function (req, res) {

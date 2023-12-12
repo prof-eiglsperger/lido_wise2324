@@ -1,23 +1,68 @@
 <div id="app">
-    <router-view></router-view>
+  <v-layout ref="app" class="rounded rounded-md">
+    <v-app-bar color="#F2DCC2" name="app-bar">
+      <v-img :height="60" src="/images/logo.png"></v-img>
+      <v-app-bar-title>Bestellen</v-app-bar-title>
+
+      <v-btn icon to="basket">
+        <v-icon>mdi-cart</v-icon>
+      </v-btn>
+      <v-btn icon href="/account">
+        <v-icon>mdi-account-circle</v-icon>
+      </v-btn>
+      <v-btn icon href="/logout">
+        <v-icon>mdi-logout</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main
+      class="d-flex align-center justify-center"
+      style="min-height: 300px"
+    >
+      <router-view></router-view>
+    </v-main>
+
+    <v-footer app name="footer" class="vue-footer">
+      <v-row>
+        <v-col>
+          Strandbad Kattenhorn<BR /> Strandbadstr. 8<BR /> 78337 Kattenhorn<BR />
+          <p class="kontakt">
+            Telefon 0049 7735 67770<BR /> strandbad@kattenhorn.de<BR />
+          </p>
+        </v-col>
+        <v-col>
+          <ul>
+            <li>Preisliste</li>
+            <li>Impressum</li>
+            <li>Datenschutz</li>
+          </ul>
+        </v-col>
+      </v-row>
+    </v-footer>
+  </v-layout>
 </div>
 <script type="module">
+  import Menu from "/vue/menu.js";
+  import Basket from "/vue/basket.js";
+  import Address from "/vue/address.js";
+  import menuentrycomponent from "/vue/menuentry.js";
 
-    import Menu from "/vue/menu.js";
-    import Basket from "/vue/basket.js";
+  const routes = [
+    { path: "/", component: Menu },
+    { path: "/basket", component: Basket },
+    { path: "/address", component: Address },
+  ];
 
-    const routes = [
-        { path: '/', component: Menu },
-        { path: '/basket', component: Basket },
-    ]
+  const router = VueRouter.createRouter({
+    history: VueRouter.createWebHashHistory(),
+    routes,
+  });
 
-    const router = VueRouter.createRouter({
-        history: VueRouter.createWebHashHistory(),
-        routes, 
-    })
-
-    // 5. Create and mount the root instance.
-    const app = Vue.createApp({})
-    app.use(router)
-    app.mount('#app')
+  // 5. Create and mount the root instance.
+  const app = Vue.createApp({});
+  const vuetify = Vuetify.createVuetify();
+  app.component("menuentry", menuentrycomponent);
+  app.use(router);
+  app.use(vuetify);
+  app.mount("#app");
 </script>

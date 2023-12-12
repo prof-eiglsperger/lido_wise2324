@@ -68,15 +68,14 @@ module.exports.routes = {
   'GET /meal/:id/edit': { controller: 'MealController', action: 'editOne' },
   'POST /meal/:id/update': { controller: 'MealController', action: 'updateOne' },
   'GET /meal/:id/destroy': { controller: 'MealController', action: 'destroyOne' },
+  'GET /meal/:id/uploadImageForm': { controller: 'MealController', action: 'uploadImageForm' },
+  'POST /meal/:id/uploadImage': { controller: 'MealController', action: 'uploadImage' },
+
  
   'GET /category/new': { view: 'pages/category/new' },
   'POST /category': { controller: 'CategoryController', action:'create' },
   'GET /category/:id/destroy': { controller: 'CategoryController', action: 'destroyOne' },
   'GET /category': { controller: 'CategoryController', action: 'find' },
-
-  'GET /shoppingbasket': 'ShoppingBasketController.show',
-  'GET /shoppingbasket/put/:mealid': 'ShoppingBasketController.put',
-  'GET /shoppingbasket/remove/:mealid': 'ShoppingBasketController.remove',
 
   /***************************************************************************
   *                                                                          *
@@ -90,4 +89,6 @@ module.exports.routes = {
   
     'GET /api/basket': {  action:'api/basket/get' },
     'POST /api/basket': {  action:'api/basket/add' },
+    'POST /api/address': {  action:'api/basket/post-address' },
+    'DELETE /api/basket': {  action:'api/basket/remove' },
 };

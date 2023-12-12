@@ -10,6 +10,9 @@ module.exports = {
             type: 'number',  
             columnType: 'integer',  
             required: true,
+            min: 0,
+            max: 100,
+            unique: true
         },
         meals: {
             collection: 'meal',

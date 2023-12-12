@@ -63,6 +63,13 @@ footer {
     padding: 2em;
 }
 
+.vue-footer {
+    background-color: #85A60F;
+    color:  white;
+    font-size: 1em;
+    font-weight: 300;
+}
+
 .kontakt {
     font-weight: bold;
 }
